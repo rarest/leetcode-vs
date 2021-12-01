@@ -50,8 +50,8 @@ public:
 
         preLeftNode->next = rightNode;
         leftNode->next = rightNextNode;
-
-        return dummy.next;xx
+        
+        return dummy.next;
     }
 };
 // @lc code=end
