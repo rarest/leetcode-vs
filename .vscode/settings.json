@@ -6,7 +6,15 @@
         "utility": "cpp",
         "vector": "cpp",
         "iosfwd": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "deque": "cpp",
+        "__hash_table": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "queue": "cpp",
+        "random": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
