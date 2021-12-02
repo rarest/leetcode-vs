@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    int maxAreaOfIsland(vector<vector<int>>& grid) {
+    int maxAreaOfIsland_1(vector<vector<int>>& grid) {
         int maxArea = 0;
         for(int i = 0; i < grid.size(); ++i) {
             for(int j = 0; j < grid[0].size(); ++j) {
@@ -36,6 +36,31 @@ public:
         }
         return maxArea;
     }
+
+
+    int maxAreaOfIsland_dfs(vector<vector<int>>& grid, int i, int j) {
+        if(i<0|| j<0 || i >= grid.size() || j>= grid[0].size()||grid[i][j] == 0)
+            return 0;
+        int xs[4] = {0, 0, 1, -1};
+        int ys[4] = {1, -1, 0, 0};
+        grid[i][j] = 0;
+        int area = 1;
+        for(int k = 0; k < 4; k++) {
+            area += maxAreaOfIsland_dfs(grid, i+xs[k], j +ys[k]);
+        }
+        return area;
+    }
+
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        int maxArea = 0;
+        for(int i = 0; i < grid.size(); ++i) {
+            for(int j = 0; j < grid[0].size(); ++j) {
+                maxArea = std::max(maxArea, maxAreaOfIsland_dfs(grid, i,j));
+            }
+        }
+        return maxArea;
+    }
+
 };
 // @lc code=end
 
