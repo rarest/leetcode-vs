@@ -22,10 +22,10 @@ public:
                     nodeStack.pop();
                     int y = nodeStack.top();
                     nodeStack.pop();
-                    if(x<0||y<0||x>=grid.size()||y>=grid[0].size()||grid[i][j]==0)
+                    if(x<0||y<0||x>=grid.size()||y>=grid[0].size()||grid[x][y]==0)
                         continue;
                     ++area;
-                    grid[i][j] = 0;
+                    grid[x][y] = 0;
                     for(int k = 0; k<4; ++k) {
                         nodeStack.push(y + ys[k]);
                         nodeStack.push(x + xs[k]);
