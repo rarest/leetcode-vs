@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "leetcode-vs",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"vector": "cpp",
+			"iosfwd": "cpp",
+			"iterator": "cpp"
+		}
+	}
+}
