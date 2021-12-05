@@ -35,8 +35,8 @@ public:
         vector<vector<bool>> visited(m, vector<bool>(n, false));
         bool find = false;
 
-        for(int i = 0; i < m; ++m) {
-            for(int j = 0; j < n; ++n){
+        for(int i = 0; i < m; ++i) {
+            for(int j = 0; j < n; ++j){
                 backTracing(board, visited, find, i, j, 0, word);
             }
         }
