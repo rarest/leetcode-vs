@@ -17,7 +17,7 @@
  */
 class Solution {
 public:
-    ListNode* swapPairs(ListNode* head) {
+    ListNode* swapPair1(ListNode* head) {
         ListNode dummpy, *p = &dummpy, *first, *second;
         p->next = head;
         while (p->next && p->next->next) {
@@ -30,6 +30,21 @@ public:
         }
         return dummpy.next;
     }
+     ListNode* swapPairs(ListNode* head) {
+        ListNode dummy, *pHead = &dummy, *first, *second;
+        pHead->next = head;
+        while (pHead->next && pHead->next->next)    
+        {
+            first = pHead->next;
+            second = pHead->next->next;
+            pHead->next =second;
+            first->next = second->next;
+            second->next = first;
+            pHead = first;
+        }
+        
+        return dummy.next;
+     }
 };
 // @lc code=end
 
