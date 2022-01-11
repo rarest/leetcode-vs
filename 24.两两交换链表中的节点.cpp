@@ -24,7 +24,7 @@ public:
             first = p->next;
             second = p->next->next;
             p->next = second;
-             first->next = second->next;
+            first->next = second->next;
             second->next = first;           
             p = first;
         }

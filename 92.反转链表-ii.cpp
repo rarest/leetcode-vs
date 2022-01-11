@@ -30,9 +30,8 @@ public:
         
     }
     ListNode* reverseBetween(ListNode* head, int left, int right) {
-        ListNode dummy, *pDummy = &dummy;
-        pDummy->next = head;
-        ListNode *preLeftNode = pDummy;
+        ListNode dummy(0, head);    
+        ListNode *preLeftNode = &dummy;
 
         for(int i = 0; i < left - 1; ++i)
             preLeftNode = preLeftNode->next;
