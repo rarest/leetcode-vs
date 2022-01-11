@@ -14,7 +14,7 @@ public:
         int key = data[l];
         int pos = l;
         for(int i = l+1; i <=r; ++i){
-            if(data[i] >= key){
+            if(data[i] > key){
                 swap(data[i], data[++pos]);
             }
         }
